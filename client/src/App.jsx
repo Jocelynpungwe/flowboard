@@ -16,7 +16,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Auth />} />
+        <Route path="/auth" element={<Auth />} />
         <Route element={<Protected />}>
           <Route index element={<Dashboard />} />
           <Route path="transactions" element={<Transactions />} />
