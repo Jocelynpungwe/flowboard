@@ -8,9 +8,8 @@ import Subscriptions from './pages/Subscriptions'
 import Workspace from './pages/Workspace'
 import AllTasks from './pages/AllTasks'
 import Calendar from './pages/Calendar'
-
 function Protected() {
-  return useSelector((s) => s.auth.token) ? <Layout /> : <Navigate to="/" />
+  return useSelector((s) => s.auth.token) ? <Layout /> : <Navigate to="/auth" />
 }
 export default function App() {
   return (
