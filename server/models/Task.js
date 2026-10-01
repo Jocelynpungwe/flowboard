@@ -1,0 +1,3 @@
+import mongoose from 'mongoose'
+const schema=new mongoose.Schema({user:{type:mongoose.Schema.Types.ObjectId,ref:'User',required:true},workspace:{type:String,enum:['personal','work','business'],required:true},title:{type:String,required:true},description:{type:String,default:''},frequency:{type:String,enum:['daily','weekly','monthly','once'],default:'once'},priority:{type:String,enum:['low','medium','high'],default:'medium'},dueDate:{type:Date,required:true},completed:{type:Boolean,default:false},completedAt:{type:Date,default:null}},{timestamps:true})
+export default mongoose.model('Task',schema)

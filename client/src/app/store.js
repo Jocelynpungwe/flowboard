@@ -1,0 +1,1 @@
+import {configureStore} from '@reduxjs/toolkit';import auth from '../features/auth/authSlice';import finance from '../features/finance/financeSlice';import tasks from '../features/tasks/taskSlice';export default configureStore({reducer:{auth,finance,tasks}})
